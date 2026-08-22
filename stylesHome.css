@@ -1,38 +1,39 @@
 
+/* Navigation bar*/
+
 .mainnav-left {
     float: left;
     text-align: left;
     font-family: 'Courier New', Courier;
+    
 }
 
 .mainnav-left h4 {
     color: #ffffff;
     text-indent: 10px;
-    float: left;
-    text-align: left;
 }
 
 .mainnav {
-    padding: 2px;
-    margin: 10px
-    float: right;
-    background-color: #3e4b40;
+    padding: 1px;
+    margin: 0px;
+    background-color: #5b4a3a;
     overflow: hidden;
     text-align: right;
     }
 
-.mainnav a {
+.mainnav-RIGHT a {
     text-decoration: none;
     color: #ffffff;
     padding: 10px;
     margin: 10px;
     font-size: 20px;
+    float: right;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .mainnav a:hover {
-    color: #16251c;
-    background-color: hsl(0, 0%, 100%);
+    color: #ECFEE8;
+    background-color: #C2EFEB;
     border-radius: 10px;
 }
 
@@ -44,44 +45,109 @@
     margin: 10px;
     border-radius: 20px;
     font-size: 15px;
+    float: right;
 }
 
 .mainnav button:hover {
     background-color: #3e4b40;
     color: #ffffff;
     border-radius: 20px;
+   
 }
+
+.startbutton hover:button{
+    cursor: pointer;
+}
+
+/* Navigation bar*/
+
+
+/* Banner / Hero Image and Text */
 
 .hero-image img {
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    height: 300px;
-    width: 100%;
+    height: 500px;
+    width: 60%;
+    opacity: 1;
+    left: 40%;
+    
 }
 
 .hero-text h1 { 
     text-align: left;
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 3%;
     font-size: 150px;
     font-style:italic;
-    font-family: 'Courier New', Courier,;
-    color: #ffe1d1;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: rgb(72, 53, 47);
 }
 
 .hero-text h2 {
     text-align: left;
     position: absolute;
-    top: 33%;
+    top: 32%;
     left: 3%;
     font-size: 40px;
     font-style:italic;
     font-family: 'Courier New', Courier,;
-    color: #fff5efc5;
+    color: #51433b;
 }
 
+.hero-text hr.hr1 {
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    width: 30%;
+    border: 1px solid #251a13;
+}
 
+.hero-text hr.hr2 {
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    width: 30%;
+    border: 1px solid #251a13;
+}
+
+.hero-text p{
+    position: absolute;
+    top: 49%;
+    left: 3%;
+    width: 30%
+}
+.hero-img {
+  -webkit-mask-image: linear-gradient(to left, black, transparent);
+  mask-image: linear-gradient(to left, black, transparent);
+  mask-repeat: no-repeat;  
+
+}
+
+/* Banner / Hero Image and Text */
+
+
+/* Main Content */
+
+.largehr {
+    position: absolute;
+    border: 40px solid #5b4a3a;
+    width: 92.5%;
+    margin: -5px;
+    left: 1%;
+ 
+}
+
+.img1 {
+    position: absolute;
+    opacity: 60%;
+    height: 70%;
+    top: 91%;
+    left: 40%
+}
 body {
-    background-color: #FFF3ED;
+    background-color: antiquewhite;
 }
+
