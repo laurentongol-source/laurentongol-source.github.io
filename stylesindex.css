@@ -289,6 +289,35 @@
     left: 20%;
 }
 
+.QUIZ {
+    position: absolute;
+    top: 142%;
+    left: 12%;
+    padding: 20px;
+    font-family: "Aladin", system-ui;
+    font-size: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #23303d;
+    color: #A9D2DC;
+
+}
+.QUIZ:hover {
+    cursor: pointer;
+    background-color: #A9D2DC;
+    color: #23303d;
+}
+
+.GRIDimages {
+    display: grid
+}
+
+.group1 img {
+    position: fixed;
+    size: 30%;
+}
+
+
 /*MAIN SECTION END*/
 
 
