@@ -203,6 +203,15 @@
     background-color: #131c25;
 }
 
+.rect5 {
+    position: absolute;
+    left: 0%;
+    top: 170%;
+    width: 1280px;
+    height: 2px;
+    background-color: #131c25;
+}
+
 .mainIMAGE {
   width: 600px;
   height: 650px;
@@ -300,6 +309,7 @@
     border: none;
     background-color: #23303d;
     color: #A9D2DC;
+    transition-duration: 1s;
 
 }
 .QUIZ:hover {
@@ -312,10 +322,78 @@
     display: grid
 }
 
+
+
 .group1 img {
-    position: fixed;
+    position: absolute;
+    top: 120%;
+    left: 38%;
+    width: 200px;
+    height: 200px;
+    border-radius: 400px;
+    filter: sepia(0.4)
+}
+
+.group1 img:hover {
     size: 30%;
 }
+.group1 h6 {
+    position: absolute;
+    top: 139%;
+    left: 39.5%;
+    font-size: 35px;
+    text-align: center;
+    font-family: "Aladin", system-ui;
+    color: #2a5b90
+
+}
+
+.group2 img {
+    position: absolute;
+    top: 120%;
+    left: 55%;
+    width: 200px;
+    height: 200px;
+    border-radius: 400px;
+    filter: sepia(0.4);
+    object-fit: cover;
+}
+
+.group2 h6 {
+    position: absolute;
+    top: 139%;
+    left: 56.5%;
+    font-size: 35px;
+    text-align: center;
+    font-family: "Aladin", system-ui;
+    color: #2a5b90
+}
+
+.group3 img {
+    position: absolute;
+    top: 120%;
+    left: 72%;
+    width: 200px;
+    height: 200px;
+    border-radius: 400px;
+    object-fit: cover;
+    filter: sepia(0.4);
+    object-position: right;
+
+}
+
+
+.group3 h6 {
+    position: absolute;
+    top: 139%;
+    left: 74.5%;
+    font-size: 35px;
+    text-align: center;
+    font-family: "Aladin", system-ui;
+    color: #2a5b90
+}
+
+
 
 
 /*MAIN SECTION END*/

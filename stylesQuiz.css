@@ -1,5 +1,4 @@
-/*Navigation bar START*/
-
+/**NavBAR */
 .navbar-LEFT {
     float: left;
     text-align: left;
@@ -59,7 +58,6 @@
     cursor: pointer;
 }
 
-
 .startDROPDOWN {
     float: right;
     overflow: hidden;
@@ -109,7 +107,7 @@
   display: block;
 }
 
-.rect4 {
+.rect1 {
     position: absolute;
     left: 0%;
     top: 10%;
@@ -118,18 +116,52 @@
     background-color: #131c25;
 }
 
-/*Navigation bar END*/
+/**NavBAR */
 
-/*MAIN SECTION START*/
 
-.intro h1 {
+
+#mainquiz {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #A9D2DC;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #c6de3c33;
+}
+
+h1 {
+    text-align: center;
 
 }
-/*MAIN SECTION END*/
 
+#question {
+    position: absolute;
+    margin-bottom: 20px;
+    font-family: "Aladin", system-ui;
+    font-size: 50px;
+}
+
+#options {
+   diplay: grid;
+   gap: 10px;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #A9D2DC;
+    color: #23303d;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: #23303d;
+    color: #A9D2DC;
+}
 
 body {
-    background-repeat: no-repeat;
-    background-color: #6ea4bf;
+    background-color: #6ea4bf 
 }
-

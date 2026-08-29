@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT</title>
-    <link rel="stylesheet" href="stylesAbout.css">
+    <title>QUIZ</title>
+     <link rel="stylesheet" href="stylesQuiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet"> 
+    <link>
 </head>
 <body>
-      <div class="navbar-HOME">
+
+     <div class="navbar-HOME">
         <div class="navbar-LEFT">
             <h3>Pieacefinder</h3>
         </div>
 
     <div class="navbar-RIGHT">
-        <button>START QUIZ</button>
+        <button class="quizbtn">START QUIZ</button>
           <div class="startDROPDOWN">
             <button class="startBTN">LEARN</button>
                 <div class="startCONTENTS">
@@ -27,14 +32,19 @@
         <a href="index.html">HOME</a>
 
     </div>
+    <div class="rect1"></div>
 
-    <div class="rect4"></div>
 
-    <div class="intro">
-    <h1>ABOUT</h1>
-    <p></p>
-    </div>
+  <div class="mainQUIZ">
+    <h1>QUIZ name</h1>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="submit">SUBMIT</button>
+</div>
 
+
+
+    <script src="quiz.js"></script>
 
 </body>
 </html>
