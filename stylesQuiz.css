@@ -120,7 +120,9 @@
 
 
 
-#mainquiz {
+.mainquiz {
+  position: absolute;
+  top: 50%;
   max-width: 500px;
   padding: 20px;
   background-color: #A9D2DC;
@@ -154,7 +156,7 @@ button {
     color: #23303d;
     border: none;
     border-radius: 20px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 button:hover {
@@ -163,5 +165,63 @@ button:hover {
 }
 
 body {
-    background-color: #6ea4bf 
+    background-color: #6ea4bf;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    max-width: 500;
+
+}
+
+#quiz {
+  position: absolute;
+  top: 50%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #A9D2DC;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #c6de3c33;
+}
+
+.name h1 {
+    text-align: center;
+    font-family: "Aladin", system-ui;
+
+
+}
+
+#question {
+    margin-bottom: 20px;
+    font-family: "Aladin", system-ui;
+    font-size: 50px;
+}
+
+#options {
+   gap: 10px;
+   grid-template-columns: repeat(2, 2fr);
+}
+
+/* Base option button styles */
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Green feedback for correct answer */
+.option-btn.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+/* Red feedback for incorrect choice */
+.option-btn.incorrect {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
 }
