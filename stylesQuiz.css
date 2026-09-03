@@ -122,8 +122,6 @@
 
 
 .mainquiz {
-  position: absolute;
-  top: 50%;
   max-width: 500px;
   padding: 20px;
   background-color: #A9D2DC;
@@ -150,6 +148,7 @@ h1 {
 }
 
 button {
+    font-family: 'Courier New', Courier, monospace;
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
@@ -173,8 +172,6 @@ body {
 }
 
 #quiz {
-  position: absolute;
-  top: 50%;
   max-width: 500px;
   padding: 20px;
   background-color: #A9D2DC;
@@ -193,24 +190,25 @@ body {
     margin-bottom: 20px;
     font-family: "Aladin", system-ui;
     font-size: 50px;
+    text-align: center;
 }
 
 #options {
    gap: 10px;
    grid-template-columns: repeat(2, 2fr);
-   justify-content: center;
 }
 
 .option-btn {
   display: block;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
   width: 15%;
   margin: 10px 0;
   padding: 10px;
   background-color: #e8fdfe;
   color: #23303d;
   border: none;
+  font-weight: bold;
+
   cursor: pointer;
 }
 
