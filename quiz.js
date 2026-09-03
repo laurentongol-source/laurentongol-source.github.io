@@ -14,6 +14,11 @@ const quizData = [
     options: ["Gyran", "Grian", "Ariana Griande", "Yeah_Jaron"],
     answer: "Yeah_Jaron"
   },
+  {
+    question: ":D",
+    options: ["Gyran", "Grian", "Ariana Griande", "Yeah_Jaron"],
+    answer: "Yeah_Jaron"
+  },
 ];
 
 // DOM Elements

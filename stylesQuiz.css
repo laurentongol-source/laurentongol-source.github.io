@@ -1,4 +1,5 @@
-/**NavBAR */
+/*Navigation bar START*/
+
 .navbar-LEFT {
     float: left;
     text-align: left;
@@ -116,7 +117,7 @@
     background-color: #131c25;
 }
 
-/**NavBAR */
+/*Navigation bar END*/
 
 
 
@@ -136,8 +137,8 @@ h1 {
 }
 
 #question {
-    position: absolute;
     margin-bottom: 20px;
+    text-align: center;
     font-family: "Aladin", system-ui;
     font-size: 50px;
 }
@@ -162,14 +163,12 @@ button {
 button:hover {
     background-color: #23303d;
     color: #A9D2DC;
+    border: none;
 }
 
 body {
     background-color: #6ea4bf;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    max-width: 500;
+
 
 }
 
@@ -199,29 +198,31 @@ body {
 #options {
    gap: 10px;
    grid-template-columns: repeat(2, 2fr);
+   justify-content: center;
 }
 
-/* Base option button styles */
 .option-btn {
   display: block;
-  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 15%;
   margin: 10px 0;
   padding: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: #e8fdfe;
+  color: #23303d;
+  border: none;
   cursor: pointer;
 }
 
-/* Green feedback for correct answer */
 .option-btn.correct {
   background-color: #d4edda;
   border-color: #c3e6cb;
   color: #155724;
 }
 
-/* Red feedback for incorrect choice */
 .option-btn.incorrect {
   background-color: #f8d7da;
   border-color: #f5c6cb;
   color: #721c24;
 }
+
