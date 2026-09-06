@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME 2</title>
-    <link rel="stylesheet" href="stylesindex.css">
+    <link rel="stylesheet" href="stylesIndex.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet"> 
@@ -20,23 +20,26 @@
         </div>
 
     <div class="navbar-RIGHT">
-        <button>START QUIZ</button>
-        <a href="results.html">RESULTS</a>
-        <a href="about.html">ABOUT</a>
-        <a href="index.html">HOME</a>
-        <div class="startDROPDOWN">
-            <a class="startBTN" href="learn.html">LEARN</a>
+          <button id="quizbtn" onclick="window.location.href='quiz.html';">START QUIZ</button>
+          <div class="startDROPDOWN">
+            <button class="startBTN" >LEARN</button>
                 <div class="startCONTENTS">
                 <a href="">the Basics</a>
                 <a href="">the Visuals</a>
                 <a href="">the Story</a>
                 </div>
         </div>
+        <a href="results.html">RESULTS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="index.html">HOME</a>
+
     </div>
+
+</div>
 
     <div class="rect4"></div>
 
-    <!-- HERO IMAGES AND TEXT-->
+    <!-- HERO SECTION START-->
 
 
 <div class="HEADINGs">
@@ -54,24 +57,49 @@
 <div class="rect2"></div>
 <div class="rect1"></div>
 
-<img class="mainSPLOTCH" src="splotchy.png" alt="splotchmain">
+<img class="mainSPLOTCH" src="images/splotchy.png" alt="splotchmain">
 
-<img class="mainIMAGE" src="image-removebg-preview.png" style="transform: scaleX(-1)" alt="coolwaterperson">
+<img class="mainIMAGE" src="images/image-removebg-preview.png" style="transform: scaleX(-1)" alt="coolwaterperson">
 
 <div class="rect3"></div>
 
+<!-- HERO SECTION END-->
 
-<!-- HERO IMAGES AND TEXT-->
-
-<!-- MAIN SECTION-->
+<!-- MAIN SECTION -->
 
 <div class="BasicINTRO">
-    <div class="introRECT1"></div>
+        <div class="introRECT1"></div>
+    <div class="introTEXT">
+        <h1>Don't know what you need to improve on?</h1>
+        <h2>Take this quiz to test your knowledge on character design</h2>
+    </div>
+    
+    <div class="GRIDimages">
+        <div class="group1">
+            <img src="images/Ocean.jpeg" alt="thebasics-image">
+            <h6>the BASICS</h6>
+        </div>
+           <div class="group2">
+            <img src="images/май Арт💦.jpeg" alt="">
+            <h6>the VISUALS</h6>
+        </div>
+        <div class="group3">
+            <img src="images/Ocean.jpeg" alt="thestory-image">
+            <h6>the STORY</h6>
+    </div>
+
+    <button class="QUIZ"  onclick="window.location.href='quiz.html';">START QUIZ</button>
+
 
 </div>
 
 <div class="circ1"></div>
 <h2 class="circTEXT">Scroll Down!</h2>
 
+<div class="rect5"></div>
+
+<audio loop autoplay muted>
+  <source src="[no copyright music]  going to bed  cute vlog music.mp3" type="audio/mp3">
+</audio>
 </body>
 </html>
