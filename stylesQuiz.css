@@ -142,8 +142,8 @@ h1 {
 }
 
 #options {
-   diplay: grid;
-   gap: 10px;
+   display: grid;
+   gap: 2px;  
    grid-template-columns: repeat(2, 1fr);
 }
 
@@ -194,7 +194,8 @@ body {
 }
 
 #options {
-   gap: 10px;
+   display: grid;
+   gap: 5px;
    grid-template-columns: repeat(2, 2fr);
 }
 
