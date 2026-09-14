@@ -20,6 +20,7 @@ const quizData = [
 
 // ELEMENTS
 const quizContainer = document.getElementById("quiz"); 
+const resultContainer = document.getElementById("result-container"); 
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const submitButton = document.getElementById("submit"); 
@@ -87,21 +88,24 @@ function highlightCorrectAnswer(correctAnswer) {
 }
 
 function showResult() {
-  quizContainer.innerHTML = `
+  const percentage = Math.round((score / quizData.length) * 100);
+
+  resultContainer.innerHTML = `
     <h1>Quiz Completed!</h1>
-    <p>Your score: ${score}/${quizData.length}</p>
+    <p>Your score: ${percentage}% (${score}/${quizData.length})</p>
     <button onclick="location.reload()">Restart Quiz</button>
-  `;
+  `
+  quizContainer.style.display = "none";
 }
 
 // when 'NEXT' button clicked, add to question counter
   // run [showResult] function if no questions left
 submitButton.addEventListener("click", () => {
   currentQuestion++;
-  if (currentQuestion < quizData.length) {
-    showQuestion();
-  } else {
+  if (currentQuestion === quizData.length) {
     showResult();
+  } else {
+     showQuestion();
   }
 });
 
