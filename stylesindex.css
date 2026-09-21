@@ -1,3 +1,7 @@
+@view-transition {
+  navigation: auto;
+}
+
 /*Navigation bar START*/
 
 .navbar-LEFT {
@@ -251,8 +255,9 @@
     text-align: center;
     position: absolute;
     top: 84%;
-    left: 79%;
+    left: 78.5%;
     font-size: 50px;
+    font-family: "Aladin", system-ui;
 }
 
 .introRECT1 {

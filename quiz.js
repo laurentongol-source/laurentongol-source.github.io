@@ -15,7 +15,12 @@ const quizData = [
     question: "Who is the man in the chicken costume",
     options: ["Gyran", "Grian", "Ariana Griande", "Yeah_Jaron"],
     answer: "Yeah_Jaron"
-  }
+  },
+   {
+    question: "who is not in GIGGS team?",
+    options: ["Impulse", "Grian", "Scott", "GeminiTay"],
+    answer: "Scott"
+  },
 ];
 
 // ELEMENTS

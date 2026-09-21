@@ -1,3 +1,7 @@
+ @view-transition {
+  navigation: auto;
+}
+
 /*Navigation bar START*/
 
 .navbar-LEFT {
@@ -121,12 +125,45 @@
 
 
 
-.mainquiz {
-  max-width: 500px;
-  padding: 20px;
-  background-color: #A9D2DC;
+#result-container {
+  background-color: #6ea4bf;
   border-radius: 5px;
-  box-shadow: 0 0 10px #c6de3c33;
+}
+
+#result-container h1 {
+     font-family: "Aladin", system-ui;
+    font-size: 50px;
+    color: #152d47;
+
+}
+
+#result-container button {
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #A9D2DC;
+    color: #23303d;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 46%;
+    left: 45%;
+
+}
+
+
+#result-container p {
+     font-family: "Aladin", system-ui;
+    font-size: 50px;
+    text-align: center;
+    background-color: #23303d;
+    background-size: 20px 50px;
+    color: #6ea4bf;
+    margin: 30px;
+    padding: 15px;
+
 }
 
 h1 {
@@ -139,6 +176,7 @@ h1 {
     text-align: center;
     font-family: "Aladin", system-ui;
     font-size: 50px;
+    color: #152d47;
 }
 
 #options {
@@ -170,18 +208,15 @@ body {
 }
 
 #quiz {
-  max-width: 500px;
   padding: 20px;
-  background-color: #A9D2DC;
+  margin: 0 auto;
+  background-color: #6ea4bf;
   border-radius: 5px;
-  box-shadow: 0 0 10px #c6de3c33;
 }
 
 .name h1 {
     text-align: center;
     font-family: "Aladin", system-ui;
-
-
 }
 
 #question {
@@ -193,14 +228,14 @@ body {
 
 #options {
    display: grid;
-   gap: 5px;
-   grid-template-columns: repeat(2, 2fr);
+   gap: 10px;
+   grid-template-columns: repeat(2, 200px);
+   justify-content: center;
 }
 
 .option-btn {
   display: block;
   font-family: 'Courier New', Courier, monospace;
-  width: 15%;
   margin: 10px 0;
   padding: 10px;
   background-color: #e8fdfe;
@@ -223,3 +258,11 @@ body {
   color: #721c24;
 }
 
+.rect2 {
+    position: absolute;
+    left: 0%;
+    top: 54%;
+    width: 1280px;
+    height: 10px;
+    background-color: #131c25;
+}
