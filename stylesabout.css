@@ -126,6 +126,32 @@
 
 /*MAIN SECTION START*/
 
+#mainheader {
+   font-family: "Aladin", system-ui;
+   font-size: 60px;
+   position: absolute;
+   text-align: center;
+   top: 10%;
+   left: 31%;
+   color: #23303d
+}
+
+.line1 { 
+    position: absolute;
+   top: 10%;
+   left: 31.5%;
+   font-size: 70px;
+   color: #A9D2DC; 
+}
+
+p {
+    max-width: 70ch;
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    text-align: center;
+
+}
 /*MAIN SECTION END*/
 
 
