@@ -1,7 +1,3 @@
-@view-transition {
-  navigation: auto;
-}
-
 /*Navigation bar START*/
 
 .navbar-LEFT {
@@ -33,6 +29,9 @@
     font-size: 20px;
     float: right;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
+
 }
 
 .navbar-RIGHT {
@@ -43,6 +42,8 @@
 .navbar-RIGHT a:hover {
     color: #331e36;
     background-color: #e8fdfe;
+    transform: scale(1.05);
+    border-radius: 20px;
 }
 
 .navbar-HOME button {
@@ -55,14 +56,16 @@
     border: none;
     font-size: 15px;
     float: right;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
+
 }
 
 .navbar-RIGHT button:hover {
     background-color: #23303d;
     color: #e8fdfe;
     cursor: pointer;
+    transform: scale(1.05);
 }
-
 
 .startDROPDOWN {
     float: right;
@@ -112,14 +115,4 @@
 .startDROPDOWN:hover .startCONTENTS {
   display: block;
 }
-
-.rect4 {
-    position: absolute;
-    left: 0%;
-    top: 10%;
-    width: 1280px;
-    height: 10px;
-    background-color: #131c25;
-}
-
 /*Navigation bar END*/

@@ -33,6 +33,9 @@
     font-size: 20px;
     float: right;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
+
 }
 
 .navbar-RIGHT {
@@ -43,6 +46,8 @@
 .navbar-RIGHT a:hover {
     color: #331e36;
     background-color: #e8fdfe;
+    transform: scale(1.05);
+    border-radius: 20px;
 }
 
 .navbar-HOME button {
@@ -55,12 +60,15 @@
     border: none;
     font-size: 15px;
     float: right;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
+
 }
 
 .navbar-RIGHT button:hover {
     background-color: #23303d;
     color: #e8fdfe;
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .startDROPDOWN {
@@ -111,16 +119,6 @@
 .startDROPDOWN:hover .startCONTENTS {
   display: block;
 }
-
-.rect1 {
-    position: absolute;
-    left: 0%;
-    top: 10%;
-    width: 1280px;
-    height: 10px;
-    background-color: #131c25;
-}
-
 /*Navigation bar END*/
 
 
@@ -177,6 +175,10 @@ h1 {
     font-family: "Aladin", system-ui;
     font-size: 50px;
     color: #23303d;
+    background-color: #A9D2DC;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px #3f7895;
 }
 
 #options {
@@ -195,11 +197,13 @@ button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
 }
 
 button:hover {
     background-color: #23303d;
     color: #A9D2DC;
+    transform: scale(1.05);
     border: none;
 }
 
@@ -229,6 +233,8 @@ body {
 #options {
    display: grid;
    gap: 10px;
+   max-width: 400px;
+   margin: 0 auto;
    grid-template-columns: repeat(2, 200px);
    justify-content: center;
 }
@@ -236,14 +242,24 @@ body {
 .option-btn {
   display: block;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
   margin: 10px 0;
-  padding: 10px;
+  padding: 18px 24px;
   background-color: #e8fdfe;
   color: #23303d;
   border: none;
   font-weight: bold;
-
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #23303d;
+    color: #A9D2DC;
+    border: none;
+    font-weight: bold;
+    text-decoration: underline;
+    transform: scale(1.05);
 }
 
 .option-btn.correct {
@@ -258,11 +274,3 @@ body {
   color: #721c24;
 }
 
-.rect2 {
-    position: absolute;
-    left: 0%;
-    top: 54%;
-    width: 1280px;
-    height: 10px;
-    background-color: #131c25;
-}
