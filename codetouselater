@@ -1,0 +1,56 @@
+  <div class="learn-dropdown">
+        <button class="learn-dropbtn">Learn</button>
+        <div class="learn-dropdown-content">
+            <a href="learn.html">Learn</a>
+            <a href="learn2.html">Learn 2</a>
+            <a href="learn3.html">Learn 3</a>
+        </div>
+
+.learn-dropdown {
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+
+.learn-dropdown .learn-dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #3e4b40;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 0px; 
+}
+
+.learn-dropdown .learn-dropbtn:hover {
+    background-color: #ffffff;
+    color: #16251c;
+    border-radius: 10px;
+}
+
+.learn-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3e4b40;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.learn-dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.learn-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.learn-dropdown:hover .learn-dropdown-content {
+  display: block;
+}
