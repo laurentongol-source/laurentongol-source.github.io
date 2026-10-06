@@ -2,6 +2,10 @@
   navigation: auto;
 }
 
+body {
+    background-color: #6ea4bf;
+}
+
 /*Navigation bar START*/
 
 .navbar-LEFT {
@@ -130,3 +134,23 @@
 }
 
 /*Navigation bar END*/
+
+.PAGE-HEADER {
+    background-color: #92bdd3;
+}
+
+.pageheader {
+    font-family: 'Aladin', cursive;
+    padding: 3rem 2rem;
+    font-size: 70px;
+    color: #23303d;
+}
+
+.header-tagline {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0rem 2rem;
+    font-size: 15px;
+    color: #23303d;
+    font-weight: bold;
+    max-width: 600px;
+}
