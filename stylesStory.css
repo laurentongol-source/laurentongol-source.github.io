@@ -137,13 +137,26 @@ body {
 
 .PAGE-HEADER {
     background-color: #92bdd3;
+    padding: 20px;
+    border-bottom: 6px solid #5b8ba4;
 }
 
+
+.header-image {
+    position: absolute;
+    left: 750px;
+    top: 100px;
+    width: 300px;
+    height: auto;
+}
+
+
 .pageheader {
-    font-family: 'Aladin', cursive;
-    padding: 3rem 2rem;
-    font-size: 70px;
-    color: #23303d;
+    font-family: 'Aladin', system-ui;
+    padding: 30px;
+    font-size: 90px;
+    color: #152d47;
+    text-shadow: 4px 4px #7098ad;
 }
 
 .header-tagline {

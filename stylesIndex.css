@@ -311,7 +311,7 @@
     left: 20%;
 }
 
-.QUIZ {
+#QUIZ {
     position: absolute;
     top: 142%;
     left: 12%;
@@ -325,7 +325,7 @@
     transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;
 
 }
-.QUIZ:hover {
+#QUIZ:hover {
     cursor: pointer;
     background-color: #A9D2DC;
     color: #23303d;
