@@ -170,9 +170,7 @@ function showResult() {
   quizContainer.style.display = "none";
   resultContainer.style.display = "block";
 
-   requestAnimationFrame(() => {
-    generateCategoryChart();
-  });
+  generateCategoryChart();
 
 }
 
