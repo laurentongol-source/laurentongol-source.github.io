@@ -17,13 +17,13 @@ const quizData = [
     question: "Who is the man in the chicken costume",
     options: ["Gyran", "Grian", "Ariana Griande", "Yeah_Jaron"],
     answer: "Yeah_Jaron",
-    category: "General"
+    category: "Grian's Team"
   },
    {
     question: "who is not in GIGGS team?",
     options: ["Impulse", "Grian", "Scott", "GeminiTay"],
     answer: "Scott",
-    category: "General"
+    category: "Grian's Team"
   },
 ];
 
@@ -39,7 +39,9 @@ let currentQuestion = 0;
 let score = 0;
 let selectedOption = null; 
 const correctSound = new Audio("correct.mp3");
+correctSound.preload = "auto";
 const incorrectSound = new Audio("wrong.mp3");
+incorrectSound.preload = "auto";
 
 const categoryScores = {};
 const categoryTotals = {};
@@ -120,58 +122,89 @@ function generateCategoryChart() {
   const chartCanvas = document.getElementById("result-chart");
   if (!chartCanvas) return;
 
-  const ctw = document.getElementById("result-chart").getContext("2d");
+  const ctx = chartCanvas.getContext("2d");
   const labels = Object.keys(categoryTotals);
   const accuracy = labels.map(tot => {
     return (categoryScores[tot] / categoryTotals[tot]) * 100;
   });
 
-  new Chart(ctw, {
+  // Global Chart.js typography configuration to match your site
+  Chart.defaults.font.family = "'Courier New', Courier, monospace";
+  Chart.defaults.font.weight = "bold";
+  Chart.defaults.color = "#ffffff"; // White text for axis data tags
+
+  new Chart(ctx, {
     type: "bar",
     data: {
       labels: labels,
       datasets: [{
         label: "Category Accuracy (%)",
         data: accuracy,
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
-        borderColor: "rgba(54, 162, 235, 1)",
-        borderWidth: 1
+        backgroundColor: "rgba(169, 210, 220, 0.7)", // #A9D2DC with soft transparency
+        borderColor: "#23303d",                      // Deep Slate Blue borders
+        borderWidth: 2,
+        borderRadius: 8,                             // Rounded bars to match UI elements
+        borderSkipped: false
       }]
     },
     options: {
       responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ffffff', // Ensures the top legend label is readable
+            font: { size: 14 }
+          }
+        }
+      },
       scales: {
+        x: {
+          grid: {
+            color: "rgba(255, 255, 255, 0.1)" // Soft grid line indicators
+          },
+          ticks: {
+            color: "#ffffff",
+            font: { size: 14 }
+          }
+        },
         y: {
           beginAtZero: true,
           max: 100,
+          grid: {
+            color: "rgba(255, 255, 255, 0.1)"
+          },
+          ticks: {
+            color: "#ffffff",
+            font: { size: 14 }
+          },
           title: {
             display: true,
-            text: "Accuracy (%)"}
+            text: "Accuracy (%)",
+            color: "#e8fdfe", // Light aqua color tag highlight
+            font: {
+              size: 16
+            }
+          }
         }
       }
     }
   });
 }
 
+
 function showResult() {
   const percentage = Math.round((score / quizData.length) * 100);
 
-  const canvasHTML = `<div style="max-width: 500px; margin: 20px auto;"><canvas id="result-chart"></canvas></div>`;
+  document.getElementById("score-text").innerText = `Your overall score: ${percentage}% (${score}/${quizData.length})`;
 
-  const summaryHTML = `
-    <h1>Quiz Completed!</h1>
-    <p>Your overall score: ${percentage}% (${score}/${quizData.length})</p>
-      <button onclick="location.reload()">Restart Quiz</button>
-      ${canvasHTML}
-  `;
-
-  resultContainer.innerHTML = summaryHTML;
-
+  // Toggle layout states
   quizContainer.style.display = "none";
   resultContainer.style.display = "block";
 
-  generateCategoryChart();
-
+  // Build the graph inside the permanent canvas element
+  setTimeout(() => {
+    generateCategoryChart();
+  }, 50);
 }
 
 // when 'NEXT' button clicked, add to question counter

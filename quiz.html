@@ -45,16 +45,26 @@
     <button id="submit">SUBMIT</button>
 </div>
 
-<div id="result-container"></div>
+<div id="result-container">
+    <h1>Quiz Completed!</h1>
+    <p id="score-text">Your overall score: 0% (0/0)</p>
+
+    <div style="max-width: 500px; height: 300px; margin: 20px auto;">
+        <canvas id="result-chart"></canvas>
+    </div>
+
+    <button onclick="location.reload()">Restart Quiz</button>
+</div>
+
 
     <div class="rect2"></div>
 
 
-<audio src="xtremefreddy-game-music-loop-1-143979_7HZC7soC.mp3" id="background-music" autoplay loop></audio>
+<audio src="xtremefreddy-game-music-loop-1-143979_7HZC7soC.mp3" id="background-music" preload="auto" loop></audio>
 
 
-<script src="https://jsdelivr.net"></script>
-<script src="quiz.js"></script>
+    <script src="https://jsdelivr.net" defer></script>
 
+    <script src="quiz.js" defer></script>
 </body>
 </html>
