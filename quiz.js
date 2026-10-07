@@ -117,6 +117,9 @@ function highlightCorrectAnswer(correctAnswer) {
 }
 
 function generateCategoryChart() {
+  const chartCanvas = document.getElementById("result-chart");
+  if (!chartCanvas) return;
+
   const ctw = document.getElementById("result-chart").getContext("2d");
   const labels = Object.keys(categoryTotals);
   const accuracy = labels.map(tot => {
@@ -167,8 +170,9 @@ function showResult() {
   quizContainer.style.display = "none";
   resultContainer.style.display = "block";
 
-
-  generateCategoryChart();
+   requestAnimationFrame(() => {
+    generateCategoryChart();
+  });
 
 }
 
