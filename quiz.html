@@ -14,6 +14,8 @@
 </head>
 <body>
 
+    <!--NAVBAR-->
+
     <div class="navbar-HOME">
         <div class="navbar-LEFT">
             <h3>Pieacefinderᝰ</h3>
@@ -38,6 +40,7 @@
 
 </div>
 
+<!--QUIZ-->
 
   <div id="quiz">
     <h1> </h1>
@@ -46,26 +49,29 @@
     <button id="submit">SUBMIT</button>
 </div>
 
-<div id="result-container">
-    <h1>Quiz Completed!</h1>
-    <p id="score-text">Your overall score: 0% (0/0)</p>
 
-    <div style="max-width: 500px; height: 300px; margin: 20px auto;">
-        <canvas id="result-chart"></canvas>
-    </div>
-
-    <button onclick="location.reload()">Restart Quiz</button>
+<!-- QUIZ REULST-->
+<div id="result-container" style="display: none;">
+  <!-- Your JavaScript clears and replaces the content here, but make sure a canvas target exists -->
+  <div style="max-width: 500px; margin: 0 auto;">
+    <canvas id="quizChart"></canvas>
+  </div>
 </div>
 
 
     <div class="rect2"></div>
 
+<!-- LOADING SCREEN-->
+<div id="loadingscreen" class="loader-overlay">
+  <div class="loader-spin"></div>
+  <p class="loader-text">Loading Quiz...</p>
+</div>
+
 
 <audio src="xtremefreddy-game-music-loop-1-143979_7HZC7soC.mp3" id="background-music" preload="auto" loop></audio>
 
 
-    <script src="https://jsdelivr.net" defer></script>
-
-    <script src="quiz.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>

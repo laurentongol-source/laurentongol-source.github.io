@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdown.classList.toggle("active");
   });
 
+  if (!dropdown || !dropdownBtn) return;
+
   // Close the menu automatically if the user clicks anywhere else outside of it
   document.addEventListener("click", (e) => {
     if (!dropdown.contains(e.target)) {
