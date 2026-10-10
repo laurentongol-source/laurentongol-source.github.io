@@ -10,14 +10,20 @@ html {
 
 .navbar-HOME {
     width: 100%;
-    padding: 10px 30px;
-    margin: 0px;
+    padding: 1px;
     background: linear-gradient(to bottom, #6ea4bf, #3f7895) ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     border-bottom: 6px solid #23303d;
+    }
+
+.navbar-HOME {
+    padding: 10px 30px;
+    margin: 0px;
+    background: linear-gradient(to bottom, #6ea4bf, #3f7895) ;
+    text-align: right;
     z-index: 1000;
     }
 
@@ -135,13 +141,11 @@ html {
   display: block;
 }
 
-.startDROPDOWN.active .startBTN {
-    background-color: #23303d;
-    color: #e8fdfe;
-    cursor: pointer;
-    transform: scale(1.05);
-    }
-
+.startDROPDOWN:not(.active):hover .startBTN {
+   background-color: #e8fdfe;
+   color: #131c25;
+   cursor: pointer;
+}
 
 .startBTN .arrow-icon {
     display: inline-block;
@@ -154,6 +158,8 @@ html {
 .startDROPDOWN.active .arrow-icon {
     transform: rotate(180deg);
 }
+
+/*Navigation bar END*/
 
 /*Navigation bar END*/
 

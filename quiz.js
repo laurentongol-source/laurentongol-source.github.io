@@ -4,20 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".startDROPDOWN");
   const dropdownBtn = document.querySelector(".startBTN");
 
-  // Toggle the menu when the button is clicked
-  dropdownBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // Prevents the document click listener from instantly closing it
-    dropdown.classList.toggle("active");
-  });
+  if (dropdown && dropdownBtn) {
+    dropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); 
+      dropdown.classList.toggle("active");
+    });
+  }
 
-  // Close the menu automatically if the user clicks anywhere else outside of it
   document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
+    if (dropdown && !dropdown.contains(e.target)) {
       dropdown.classList.remove("active");
     }
   });
 });
-
 
 //list of the questions
 const quizData = [
@@ -152,10 +151,10 @@ function highlightCorrectAnswer(correctAnswer) {
 function showResult() {
  quizContainer.style.display = "none";
  resultContainer.style.display = "block";
+
 // show the user what their overall result is
-
-
   const percentage = Math.round((score / quizData.length) * 100);
+
  resultContainer.innerHTML = `
    <h1>Quiz Completed!</h1>
    <p id="scoreText">Your overall score: ${percentage}% (${score}/${quizData.length})</p>
@@ -163,14 +162,47 @@ function showResult() {
      <canvas id="quizChart"></canvas>
    </div>
    <button onclick="location.reload()" style="margin-top: 20px; padding: 10px 20px; font-family: 'Courier New'; cursor: pointer;">Restart Quiz</button>
+  <button onclick="window.location.href='results.html'" class="quiz-action-btn logs-btn">View All-Time Logs</button>
+
  `;
 
+   // get the current date and time user did quiz
+const attemptDate = new Date().toLocaleString([], {
+  month: 'short',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+});
 
+// create a profile for every new attemp
+const newAttempt = {
+  date: attemptDate,
+  percentage: percentage,
+  correct: score,
+  total: quizData.length
+
+}
+
+// fetch the history list ; if doesn't exist, make a new history list
+let quizHistory = JSON.parse(localStorage.getItem("quizHistoryLog"));
+if (!Array.isArray(quizHistory)) {
+  quizHistory = [];
+}
+
+// add new attempt profile to the start of the list
+quizHistory.unshift(newAttempt)
+
+// add updated list to local storage
+localStorage.setItem("quizHistoryLog",JSON.stringify(quizHistory));
+
+ generateCategoryChart();
+}
+
+function generateCategoryChart() {
  //create categories ; assign their data that users have got
  const categories = ['Basics', 'Visuals', 'Writing'];
  const correctData = categories.map(cat => categoryMetrics[cat].correct);
  const incorrectData = categories.map(cat => categoryMetrics[cat].incorrect);
-
 
 // create the graph showing their results in each cat ; display
  const ctx = document.getElementById('quizChart').getContext('2d');
@@ -244,9 +276,10 @@ submitButton.addEventListener("click", () => {
 });
 
 
+
+
 // start the quiz
 showQuestion();
-
 
 
 
@@ -259,7 +292,7 @@ const loadingscreen = document.getElementById("loadingscreen");
 if(loadingscreen) {
   loadingscreen.classList.add("fade-out");
 
-  settimeout(() => {
+  setTimeout(() => {
     loadingscreen.remove();
   }, 400);
 }

@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESULTS 2</title>
-    <link rel="stylesheet" href="stylesIndex.css">
+    <link rel="stylesheet" href="stylesResults.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet"> 
     <link rel="icon" type="image/favicon.png" href="favicon.png">
 </head>
 <body>
-    <!-- BANNER -->
-
- 
     <div class="navbar-HOME">
         <div class="navbar-LEFT">
             <h3>Pieacefinderᝰ</h3>
@@ -32,9 +29,18 @@
                 </div>
         </div>
         <button id="quizbtn" onclick="window.location.href='quiz.html';">START QUIZ</button>
+    </div>
+</div>
 
+<div id="history-container" class="dashboard-box">
 
+    <div class="dashboard-header">
+    <h2 class="dashboard-title">Your track History!</h2>
+    <button id="clearHistoryBtn" class="clear-btn">Clear History</button>
     </div>
 
+    <ul id="history-list" c;ass="attempts-list"></ul>
 </div>
+
+<script src="results.js"></script>
 </body>
