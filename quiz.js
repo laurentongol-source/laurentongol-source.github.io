@@ -1,3 +1,13 @@
+function preventAccidentalLeave(e) {
+  e.preventDefault();
+  // Most modern browsers ignore the custom string and display a generic system message,
+  // but setting returnValue is required for the dialog box to trigger.
+  e.returnValue = "Are you sure you want to leave? Your progress will be lost!";
+  return e.returnValue;
+}
+
+window.addEventListener("beforeunload", preventAccidentalLeave);
+
 //Navigation bar dropdown
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -149,6 +159,8 @@ function highlightCorrectAnswer(correctAnswer) {
 
 
 function showResult() {
+
+   window.removeEventListener("beforeunload", preventAccidentalLeave);
  quizContainer.style.display = "none";
  resultContainer.style.display = "block";
 
@@ -237,7 +249,7 @@ function generateCategoryChart() {
          position: 'bottom',
          labels: { 
           color: '#23303d',
-          font: { family: 'Courier New', size: 14 } }
+          font: { family: 'Courier New', size: 14, weight: 'bold', } }
        }
      },
      scales: {
@@ -248,14 +260,16 @@ function generateCategoryChart() {
          ticks: {
           color: '#23303d',
            stepSize: 1,
-           font: { family: 'Courier New', size: 14 }
+           font: { family: 'Courier New', size: 14, weight: 'bold', }
          }
        },
        x: {
          ticks: {
-          color: '#23303d',
- 
-          font: { family: 'Courier New', size: 14 } }
+          color: '#23303d', 
+          font: { family: 'Courier New', size: 14,
+                      weight: 'bold',
+
+           } }
        }
      }
    }
@@ -280,9 +294,6 @@ submitButton.addEventListener("click", () => {
 
 // start the quiz
 showQuestion();
-
-
-
 
 // have the loading screen be there until all script is loaded
 
