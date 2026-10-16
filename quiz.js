@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const sound = document.getElementById("click-sound");
+
+    // Select all links and your quiz buttons
+    const interactiveElements = document.querySelectorAll(".navbar-RIGHT a, .startCONTENTS a, #quizbtn, button#QUIZ");
+
+    interactiveElements.forEach(element => {
+        element.addEventListener("mousedown", () => {
+            sound.currentTime = 0; // Reset to start
+            sound.play();          // Fire the quick sound immediately
+        });
+    });
+});
+
 function preventAccidentalLeave(e) {
   e.preventDefault();
   // Most modern browsers ignore the custom string and display a generic system message,
@@ -58,6 +72,7 @@ const quizData = [
 
 
 // ELEMENTS
+const progressBar = document.getElementById("progress-bar")
 const quizContainer = document.getElementById("quiz");
 const resultContainer = document.getElementById("result-container");
 const questionElement = document.getElementById("question");
@@ -76,8 +91,10 @@ let selectedOption = null;
 // AUDIO
 const correctSound = new Audio("correct.mp3");
 correctSound.preload = "auto";
+correctSound.volume = 0.4;
 const incorrectSound = new Audio("wrong.mp3");
 incorrectSound.preload = "auto";
+incorrectSound.volume = 0.4;
 
 
 // accuracy metrics
@@ -90,6 +107,13 @@ const categoryMetrics = {
 
 // creates and displays the question on the screen
 function showQuestion() {
+
+  if (progressBar) {
+  // calcualate progres based on position
+  const progressPercentage = Math.round(((currentQuestion) / quizData.length) * 100);
+    progressBar.style.width = `${progressPercentage}%`;
+
+}
  const question = quizData[currentQuestion];
  questionElement.innerText = question.question;
   optionsElement.innerHTML = "";
@@ -293,8 +317,7 @@ submitButton.addEventListener("click", () => {
 
 
 // start the quiz
-showQuestion();
-
+showQuestion()
 // have the loading screen be there until all script is loaded
 
 const loadingscreen = document.getElementById("loadingscreen");

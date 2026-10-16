@@ -362,3 +362,23 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+/* Loading Bar */
+
+.progress-container {
+    width: 100%;
+    background-color: #23303d;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #A9D2DC; 
+    border-radius: 6px;
+    transition: width 0.4s ease-in-out;
+}

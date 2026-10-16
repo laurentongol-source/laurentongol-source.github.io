@@ -38,12 +38,15 @@
 <!--QUIZ-->
 
   <div id="quiz">
+
+    <div class="progress-container">
+    <div id="progress-bar"></div>
+</div>
     <h1> </h1>
     <div id="question"></div>
     <div id="options"></div>
     <button id="submit">SUBMIT</button>
 </div>
-
 
 <!-- QUIZ REULST-->
 <div id="result-container" style="display: none;">
@@ -63,7 +66,8 @@
 </div>
 
 
-<audio src="xtremefreddy-game-music-loop-1-143979_7HZC7soC.mp3" id="background-music" preload="auto" loop></audio>
+<audio src="xtremefreddy-game-music-loop-1-143979_7HZC7soC.mp3" id="background-music" loop></audio>
+<audio id="click-sound" src="existentialtaco-confirm-tap-394001.mp3" preload="auto"></audio>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>

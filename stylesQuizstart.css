@@ -171,8 +171,97 @@ body {
 }
 
 .quiz-container {
-    background-color: #ffffff;
+    background-color: #3f7895;
     text-align: center;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #23303d;
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px #23303d;
+}
+
+.quiz-container h1 {
+    font-family: 'Aladin';
+    font-size: 50px;
+    background-color: #23303d;
+    color: #6ea4bf;
+    padding: 30px;
+    width: 500px;
+    height: auto; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.quiz-container h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: #6ea4bf;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.quiz-container ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.quiz-container ul li {
+    margin-bottom: 25px;
+}
+
+.quiz-container ul li:last-child {
+    margin-bottom: 0px;
+}
+.quiz-container a {
+    display: inline-block;
+    background-color: #6ea4bf;
+    color: #23303d;
+    padding: 9px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 15px;
+    text-decoration: none;
+    transform: scale(1);
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.quiz-container a:hover {
+    transform: scale(1.05);
+    background-color: #23303d;
+    color: #6ea4bf
+}
+
+.quiz-container button {
+    display: inline-block;
+    font-family: 'Aladin';
+    background-color: #23303d;
+    color: #6ea4bf;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    font-size: 40px;
+    transition: all 0.4s ease;
+    box-shadow:  0 0 10px #23303d;
+}
+
+.quiz-container button:hover {
+    transform: scale(1.09);
+    background-color: #6ea4bf;
+    color: #23303d;
+}
+
+img {
+    position: absolute;
+    top: 16%;
+    left: 3%;
+    filter: hue-rotate(355deg) sepia(0.4) drop-shadow(0px 0px 10px #6ea4bf);
 }
