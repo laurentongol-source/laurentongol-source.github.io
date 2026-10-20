@@ -112,7 +112,6 @@ function showQuestion() {
   // calcualate progres based on position
   const progressPercentage = Math.round(((currentQuestion) / quizData.length) * 100);
     progressBar.style.width = `${progressPercentage}%`;
-
 }
  const question = quizData[currentQuestion];
  questionElement.innerText = question.question;
