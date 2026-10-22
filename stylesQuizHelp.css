@@ -29,20 +29,40 @@
     padding: 10px;
 
 }
-.help-container p {
+.help-container li {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     line-height: 1.6;
     color: #131c25;
     font-weight: bold;
     margin-bottom: 15px;
+    list-style: none;
 }
 
-.help-container h5 {
+.help-container h2 {
     max-width: 70ch;
     font-size: 30px;
     text-align: center;
     font-family: 'Aladin', system-ui;
    color: #23303d;
 
+}
+
+.help-container a {
+    display: inline-block;
+    background-color: #6ea4bf;
+    color: #23303d;
+    padding: 9px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 15px;
+    text-decoration: none;
+    transform: scale(1);
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.help-container a:hover {
+    transform: scale(1.05);
+    background-color: #23303d;
+    color: #6ea4bf
 }
