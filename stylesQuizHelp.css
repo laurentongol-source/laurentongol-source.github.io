@@ -1,0 +1,48 @@
+.page-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.help-container {
+    max-width: 650px;
+    width: 100%;
+    padding: 35px;
+    background-color: #3f7895;
+    border-radius: 12px;
+    border-bottom: 6px solid #23303d; 
+    box-shadow: 0px 8px 24px #3f7895;
+    text-align: center;
+}
+
+.help-container h1 {
+    font-family: 'Aladin', system-ui;
+    font-size: 48px;
+    color: #6ea4bf;
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: #23303d;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+.help-container p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #131c25;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.help-container h5 {
+    max-width: 70ch;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Aladin', system-ui;
+   color: #23303d;
+
+}
