@@ -105,11 +105,10 @@ body {
 }
 
 #options {
-   display: grid;
+   display: flex;
+   flex-direction: column;
    gap: 10px;
-   max-width: 400px;
    margin: 0 auto;
-   grid-template-columns: repeat(2, 200px);
    justify-content: center;
 }
 
@@ -133,7 +132,7 @@ body {
     border: none;
     font-weight: bold;
     text-decoration: underline;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .option-btn.correct {

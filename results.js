@@ -1,23 +1,3 @@
-// NVABAR
-
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdown = document.querySelector(".startDROPDOWN");
-  const dropdownBtn = document.querySelector(".startBTN");
-
-  if (dropdown && dropdownBtn) {
-    dropdownBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); 
-      dropdown.classList.toggle("active");
-    });
-  }
-
-  document.addEventListener("click", (e) => {
-    if (dropdown && !dropdown.contains(e.target)) {
-      dropdown.classList.remove("active");
-    }
-  });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const historyList = document.getElementById("history-list");
   const clearBTN = document.getElementById("clearHistoryBtn");
@@ -41,7 +21,7 @@ historyList.innerHTML ="";
 // Render out the historic performance card modules
   quizHistory.forEach((attempt, index) => {
     const listItem = document.createElement("li");
-    listItem.classList.add("history-card"); // 🔑 Injects a clean CSS class name
+    listItem.classList.add("history-card");
     
     listItem.innerHTML = `
       <div class="card-meta">
@@ -56,6 +36,7 @@ historyList.innerHTML ="";
     historyList.appendChild(listItem);
   });
 
+  //give USERS warning about deletion
     if (clearBTN) {
     clearBTN.addEventListener("click", () => {
       if (confirm("Are you sure you want to delete all your quiz history scores permanently?")) {
@@ -74,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     interactiveElements.forEach(element => {
         element.addEventListener("mousedown", () => {
-            sound.currentTime = 0; // Reset to start
-            sound.play();          // Fire the quick sound immediately
+            sound.currentTime = 0;
+            sound.play();         
         });
     });
 });

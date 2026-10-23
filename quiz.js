@@ -6,20 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     interactiveElements.forEach(element => {
         element.addEventListener("mousedown", () => {
-            sound.currentTime = 0; // Reset to start
-            sound.play();          // Fire the quick sound immediately
+            sound.currentTime = 0;
+            sound.play();          
         });
     });
 });
 
 function preventAccidentalLeave(e) {
   e.preventDefault();
-  // Most modern browsers ignore the custom string and display a generic system message,
-  // but setting returnValue is required for the dialog box to trigger.
-  e.returnValue = "Are you sure you want to leave? Your progress will be lost!";
-  return e.returnValue;
+  const confirmMessage = "Are you sure you want to leave? Your progress will be lost!";
+  e.returnValue = confirmMessage
 }
-
 window.addEventListener("beforeunload", preventAccidentalLeave);
 
 //Navigation bar dropdown
@@ -44,30 +41,106 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //list of the questions
 const quizData = [
+  //The Basics Questions
  {
-   question: "Is this a Question?",
-   options: ["No", "Yes"],
-   answer: "Yes",
+   question: "Character's are used for...",
+   options: ["Books", "Films", "Games", "All of the above"],
+   answer: "All of the above",
    category: "Basics"
  },
  {
-   question: "Which of these is NOT a fundamental of Character Design?",
-   options: ["Style and Tone", "Shape Language", "Story", "Star Quality"],
-   answer: "Star Quality",
+   question: "What is an alternative name for the supporting cast?",
+   options: ["Side Characters", "Backup Characters", "Background Characters", "Chump change"],
+   answer: "Side Characters",
+   category: "Basics"
+ },
+ {
+   question: "Which of the following is NOT a common use for characters ?",
+   options: ["To drive the story forward", "To add more emotion to the story", "To convery themes and morals", "To visually attract an audience"],
+   answer: "To visually attract an audience",
+   category: "Basics"
+ },
+ {
+   question: "A main character is… ",
+   options: ["A character central to the story", "The second most important character", "Just there for the vibes", "The only character that matters"],
+   answer: "A character central to the story",
+   category: "Basics"
+ },
+
+ {
+   question: "Stories that only have one character may be seen as : ",
+   options: ["Uninteresting", "Fascinating", "Disgusting", "Exciting"],
+   answer: "Uninteresting",
+   category: "Basics"
+ },
+
+ //The Story
+ {
+   question: "What is one thing you should include in your character’s introduction?",
+   options: ["Their problem", "Their Backstory", "Their Future", "Their Quality"],
+   answer: "Their problem",
+   category: "Writing"
+ },
+
+  {
+   question: "What makes a character’s story important?",
+   options: ["Provides your consumer with insight, information, and interest", "Giving them unnecessary plots makes them good", "To make them the center of the entire universe", "Absolutely nothing"],
+   answer: "Provides your consumer with insight, information, and interest",
+   category: "Writing"
+ },
+
+  {
+   question: "Your character’s backstory should include…",
+   options: ["Their Dialogue, Their Actions, Their Main Problem", "Magic, Intrigue, and Mystery", "The Untouched, The Events, and the Aftermath", "All of the above"],
+   answer: "The Untouched, The Events, and the Aftermath",
+   category: "Writing"
+ },
+
+  {
+   question: "Why shouldn’t you show EVERYTHING about a character?",
+   options: ["It’s tacky and unrealistic", "It doesn’t contribute to the plot", "Too many events make it seem bad", "It takes up too much of the story"],
+   answer: "It doesn’t contribute to the plot",
+   category: "Writing"
+ },
+
+  {
+   question: "'Write what you know' is… ",
+   options: ["Introducing a new character", "Developing a good backstory", "Write what you have knowledge of", "Add as much factors that you know into your story"],
+   answer: "Write what you have knowledge of",
+   category: "Writing"
+ },
+
+ //VISUALS
+  {
+   question: "Why might you want to do research before starting ?",
+   options: ["To properly ground your character’s clothing style, history, and culture", "To fInd the fanciest clothing pieces to put on your character", "To lock in ONE specific design and make no further changes", "To limit the creator’s creativity to expand"],
+   answer: "To properly ground your character’s clothing style, history, and culture",
    category: "Visuals"
  },
- {
-   question: "Who is the man in the chicken costume",
-   options: ["Gyran", "Grian", "Ariana Griande", "Yeah_Jaron"],
-   answer: "Yeah_Jaron",
-   category: "Writing"
+  {
+   question: "What makes thumbnail sketches so important?",
+   options: ["It’s easier to post on social media", "To experiment with many different alterations of your character", "Doing the same thing 100 times helps you", "They aren’t, detailed rendering is much more important"],
+   answer: "To experiment with many different alterations of your character",
+   category: "Visuals"
  },
- {
-   question: "who is not in GIGGS team?",
-   options: ["Impulse", "Grian", "Scott", "GeminiTay"],
-   answer: "Scott",
-   category: "Writing"
- }
+   {
+   question: "How would you display a character’s personality with their clothing?",
+   options: ["By making them look really rich for no apparent reason", "By giving them clothing items that don’t match their time period ", "By make their outfit so basic the audience doesn’t pay attention", "By adding features that reflect their culture, status, and history"],
+   answer: "By adding features that reflect their culture, status, and history",
+   category: "Visuals"
+ },
+   {
+   question: "Colour blocking allows you to…",
+   options: ["Have strict protocols on how to colour your character", "Make your character appear invisible to the your background", "Draw attention to every part of your character at the same time", "Create good ratios that guides the viewer’s eye without clutter or messiness"],
+   answer: "Create good ratios that guides the viewer’s eye without clutter or messiness",
+   category: "Visuals"
+ },
+   {
+   question: "By using a moodboard, you are… ",
+   options: ["Creating the vibes of your character they will follow", "Helping yourself count how much your character costs", "Tracking your mood about the character’s development", "Giving yourself a barrier from changing your character’s concept"],
+   answer: "Creating the vibes of your character they will follow",
+   category: "Visuals"
+ },
 ];
 
 
